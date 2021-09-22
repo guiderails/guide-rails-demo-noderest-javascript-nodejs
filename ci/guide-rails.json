@@ -70,8 +70,8 @@
 				"properties": [
 					{
 						"name": "npm.cache",
-						"description": "npm cache path is set to ${SEGMENT_BASE_DIR}/cache/.npm by default, when caching is enabled. Caches are maintained on the worker where your build gets allocated. For a new worker assigned to the build, the cache will be re-created",
-						"value": "${SEGMENT_BASE_DIR}/cache/.npm"
+						"value": "${SEGMENT_BASE_DIR}/cache/.npm",
+						"description": "npm cache path is set to ${SEGMENT_BASE_DIR}/cache/.npm by default, when caching is enabled. Caches are maintained on the worker where your build gets allocated. For a new worker assigned to the build, the cache will be re-created"
 					}
 				],
 				"deployment_strategy": {},
@@ -109,18 +109,7 @@
 					}
 				],
 				"post_deployment_actions": {
-					"instances": null,
-					"loadbalanced": false,
-					"loadbalancer": {
-						"TargetGroupName": "",
-						"TargetGroupPort": 0,
-						"TargetGroupProtocol": "",
-						"TargetType": "",
-						"VPCID": "",
-						"HealthCheckEnabled": false,
-						"HealthCheckPort": "",
-						"UnhealthyThresholdCount": 0
-					}
+					"loadbalancer": {}
 				},
 				"cache_info": {
 					"paths": [
@@ -249,8 +238,8 @@
 					{
 						"name": "((application.name))",
 						"number_of_instances": 1,
-						"cloud_provider_name": "guide-rails",
 						"cloud_provider_type": "aws",
+						"cloud_provider_name": "guide-rails",
 						"os_type": "default",
 						"networks": [
 							"integration"
@@ -307,18 +296,7 @@
 					}
 				],
 				"post_deployment_actions": {
-					"instances": null,
-					"loadbalanced": false,
-					"loadbalancer": {
-						"TargetGroupName": "",
-						"TargetGroupPort": 0,
-						"TargetGroupProtocol": "",
-						"TargetType": "",
-						"VPCID": "",
-						"HealthCheckEnabled": false,
-						"HealthCheckPort": "",
-						"UnhealthyThresholdCount": 0
-					}
+					"loadbalancer": {}
 				}
 			}
 		],
